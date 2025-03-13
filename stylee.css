@@ -10,11 +10,19 @@
 /** hot sales */
 /* 🎯 1. 让 "热卖榜" 标题靠右 */
 .hot-sale-title {
-    text-align: right;
+    text-align: center;
     font-size: 24px;
     font-weight: bold;
     color: #ff5733;
     margin-bottom: 20px;
+}
+/* 🎯 1. 统一热卖区商品图片尺寸 */
+.hot-sale-item img {
+    width: 150px;  /* 固定宽度 */
+    height: 150px; /* 固定高度 */
+    object-fit: cover; /* 保持比例并填充 */
+    border-radius: 8px; /* 让图片更有美感 */
+    display: block;
 }
 
 /* 🎯 2. 调整热卖榜整体布局 */
