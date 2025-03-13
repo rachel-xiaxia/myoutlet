@@ -7,62 +7,82 @@
  *   4 Components
  *   5 Plugins
  */
-/* 📌 1. 确保热卖榜和侧边栏正确排列 */
-.hot-sale-content {
-    flex: 0 0 70%; /* 主要内容占 70% */
-    max-width: 70%;
+/** hot sales */
+/* 🎯 1. 让 "热卖榜" 标题靠右 */
+.hot-sale-title {
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5733;
+    margin-bottom: 20px;
 }
 
-.hot-sale-sidebar {
-    flex: 0 0 28%; /* 侧边栏占 28% */
-    max-width: 28%;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 📌 2. 让侧边栏在桌面端固定在右侧 */
-@media (min-width: 992px) {
-    .hot-sale-sidebar {
-        position: relative;
-        right: 0;
-        top: 0;
-    }
-}
-
-/* 📌 3. 让侧边栏在移动端正常换行 */
-@media (max-width: 991px) {
-    .hot-sale-sidebar {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-}
-
-/* 让热卖榜和侧边栏排成两列 */
-.hot-sale-container {
+/* 🎯 2. 调整热卖榜整体布局 */
+.hot-sale-section .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-/* 确保主内容（热卖榜）占据足够的空间 */
-.hot-sale-content {
-    flex: 0 0 70%; /* 主内容区域占 70% */
-    max-width: 70%;
+/* 🎯 3. 美化热卖商品展示 */
+.hot-sale-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* 侧边栏样式，固定在右侧 */
+.hot-sale-item:hover {
+    transform: scale(1.03);
+}
+
+/* 🎯 4. 让商品图片大小统一 */
+.hot-sale-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+/* 🎯 5. 让商品文本更整齐 */
+.hot-sale-text h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff5733;
+    margin-bottom: 5px;
+}
+
+/* 🎯 6. 按钮样式 */
+.btn-primary {
+    background-color: #ff5733;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #e04e2a;
+}
+
+/* 🎯 7. 侧边栏优化 */
 .hot-sale-sidebar {
-    flex: 0 0 28%; /* 侧边栏占 28% */
-    max-width: 28%;
+    flex: 0 0 25%;
+    max-width: 25%;
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 让侧边栏的列表美观 */
+/* 🎯 8. 侧边栏的列表美化 */
 .hot-sale-sidebar ul {
     padding: 0;
     list-style: none;
@@ -83,123 +103,8 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* 📌 1. 让每个商品卡片整齐、对齐 */
-.tab-classic-content {
-    border: 1px solid #ddd;  /* 添加边框 */
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;  /* 让背景变白，看起来更整洁 */
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-    display: flex;  /* 让图片和文字并排 */
-    align-items: center; /* 让内容垂直居中 */
-}
 
-/* 📌 2. 让鼠标悬停时卡片有放大效果 */
-.tab-classic-content:hover {
-    transform: scale(1.03);  /* 微放大 */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-}
 
-/* 📌 3. 让商品图片大小统一 */
-.tab-classic-img-block img {
-    width: 120px; /* 统一图片宽度 */
-    height: 120px; /* 统一图片高度 */
-    object-fit: cover; /* 避免图片变形 */
-    border-radius: 8px; /* 让图片有圆角 */
-}
-
-/* 📌 4. 让文本信息部分整齐排列 */
-.tab-classic-content .col-lg-6 {
-    padding-left: 20px; /* 让文字距离图片有间距 */
-}
-
-/* 📌 5. 让商品标题更加突出 */
-.tab-classic-content-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ff5733; /* 让标题颜色更突出 */
-    margin-bottom: 10px;
-}
-
-/* 📌 6. 让按钮更加美观 */
-.btn-primary {
-    background-color: #ff5733;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-    background-color: #e04e2a; /* 悬停时变暗 */
-}
-
-/* 📌 7. 调整“热门分类”侧边栏，让列表更美观 */
-.tab-list {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.tab-list ul {
-    padding: 0;
-    list-style: none;
-}
-
-.tab-list ul li {
-    padding: 12px;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-    text-align: center;
-    font-weight: bold;
-}
-
-.tab-list ul li:hover {
-    background-color: #ff5733;
-    color: white;
-    transition: all 0.3s ease-in-out;
-}
-
-.tab-classic-content {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.tab-classic-content:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.tab-classic-content-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffd700; /* 让标题更突出 */
-}
-
-.tab-list ul {
-    padding: 0;
-    list-style: none;
-}
-
-.tab-list ul li {
-    padding: 10px;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-}
-
-.tab-list ul li:hover {
-    background-color: #f8f9fa;
-    color: #ff5733;
-}
 
 /** @group Base */
 html *:first-child {
