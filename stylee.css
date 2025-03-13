@@ -46,6 +46,16 @@ button:hover {
 .pager li {
 	display: inline;
 }
+.material-symbols-outlined {
+    font-size: 50px;
+    color: #007BFF;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.material-symbols-outlined:hover {
+    color: #ff5733;
+    transform: scale(1.3) rotate(10deg);
+}
 
 .pager li > a,
 .pager li > span {
