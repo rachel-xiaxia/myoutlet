@@ -7,6 +7,43 @@
  *   4 Components
  *   5 Plugins
  */
+.tab-classic-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tab-classic-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-classic-content-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd700; /* 让标题更突出 */
+}
+
+.tab-list ul {
+    padding: 0;
+    list-style: none;
+}
+
+.tab-list ul li {
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.tab-list ul li:hover {
+    background-color: #f8f9fa;
+    color: #ff5733;
+}
+
 /** @group Base */
 html *:first-child {
 	margin-top: 0;
