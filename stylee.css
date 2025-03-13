@@ -7,6 +7,38 @@
  *   4 Components
  *   5 Plugins
  */
+/* 📌 1. 确保热卖榜和侧边栏正确排列 */
+.hot-sale-content {
+    flex: 0 0 70%; /* 主要内容占 70% */
+    max-width: 70%;
+}
+
+.hot-sale-sidebar {
+    flex: 0 0 28%; /* 侧边栏占 28% */
+    max-width: 28%;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 2. 让侧边栏在桌面端固定在右侧 */
+@media (min-width: 992px) {
+    .hot-sale-sidebar {
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+}
+
+/* 📌 3. 让侧边栏在移动端正常换行 */
+@media (max-width: 991px) {
+    .hot-sale-sidebar {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
 /* 让热卖榜和侧边栏排成两列 */
 .hot-sale-container {
     display: flex;
