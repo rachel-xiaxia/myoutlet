@@ -7,6 +7,50 @@
  *   4 Components
  *   5 Plugins
  */
+/* 让热卖榜和侧边栏排成两列 */
+.hot-sale-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 确保主内容（热卖榜）占据足够的空间 */
+.hot-sale-content {
+    flex: 0 0 70%; /* 主内容区域占 70% */
+    max-width: 70%;
+}
+
+/* 侧边栏样式，固定在右侧 */
+.hot-sale-sidebar {
+    flex: 0 0 28%; /* 侧边栏占 28% */
+    max-width: 28%;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 让侧边栏的列表美观 */
+.hot-sale-sidebar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.hot-sale-sidebar ul li {
+    padding: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hot-sale-sidebar ul li:hover {
+    background-color: #ff5733;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
 /* 📌 1. 让每个商品卡片整齐、对齐 */
 .tab-classic-content {
     border: 1px solid #ddd;  /* 添加边框 */
