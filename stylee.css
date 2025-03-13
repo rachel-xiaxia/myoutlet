@@ -34,6 +34,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    padding-bottom: 40px;
 }
 
 /* 🎯 3. 美化热卖商品展示 */
