@@ -8,14 +8,18 @@
  *   5 Plugins
  */
 /** hot sales */
-/* 🎯 1. 让 "热卖榜" 标题靠右 */
 .hot-sale-title {
-    text-align: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100px; /* 让这个标题区域高度适当 */
     font-size: 24px;
     font-weight: bold;
     color: #ff5733;
-    margin-bottom: 20px;
+    background-color: #f8f8f8; /* 添加背景颜色，增强可见度 */
+    border-radius: 8px; /* 给标题区域加一点圆角 */
 }
+
 /* 🎯 1. 统一热卖区商品图片尺寸 */
 .hot-sale-item img {
     width: 150px;  /* 固定宽度 */
