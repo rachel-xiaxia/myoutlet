@@ -7,30 +7,6 @@
  *   4 Components
  *   5 Plugins
  */
-.menu {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.menu-item {
-    padding: 10px 15px;
-    border: none;
-    background: #eee;
-    cursor: pointer;
-}
-
-.menu-item.active {
-    background: #007bff;
-    color: white;
-}
-
-.category {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-}
-
 /** hot sales */
 .hot-sale-title {
     display: flex;
