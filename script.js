@@ -18,6 +18,28 @@ var userAgent = navigator.userAgent.toLowerCase(),
 	windowReady = false,
 	isNoviBuilder = false,
 
+	document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".menu-item");
+    const categories = document.querySelectorAll(".category");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            const category = this.getAttribute("data-category");
+
+            // 隐藏所有类别的产品
+            categories.forEach(cat => cat.style.display = "none");
+
+            // 显示被选中的类别
+            document.getElementById(category).style.display = "block";
+
+            // 更新按钮的 active 状态
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+});
+
+
 	plugins = {
 		responsiveTabs: $(".responsive-tabs"),
 		rdNavbar: $(".rd-navbar"),
